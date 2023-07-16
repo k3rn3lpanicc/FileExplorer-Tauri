@@ -1,0 +1,488 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #191919;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-content: center;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+html, body {
+  height: 100%;
+}
+
+.app {
+  width: 100%;
+  text-align: center;
+  align-content: flex-start;
+  display: inline-flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+}
+
+.rightbar{
+  width: 83%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  display: inline-flex;
+}
+
+.searchbar{
+  width: 100%;
+  height: 7rem;
+  background-color: #191919;
+  border-bottom: #2B2B2B 2px solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+.searchText{
+  margin-left: 1rem;
+  width: 40%;
+  height: 3rem;
+  border: 1px solid #646cff;
+  border-radius: 1rem;
+  background-color: #191919;
+  align-content: center;
+  align-items: center;
+  font: 14px hack;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-overflow: ellipsis;
+  color: #646cff;
+  transition: filter 0.8s;
+}
+
+.drive{
+  margin-left: 0.1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #646cff;
+  border-radius: 1rem 0rem 0rem 1rem;
+  background-color: #191919;
+  align-content: center;
+  align-items: center;
+  font: 14px hack;
+  padding: 1rem;
+  text-overflow: ellipsis;
+  color: #646cff;
+  cursor: pointer;
+  transition: border-radius 0.5s, filter 0.8s;
+}
+
+.drive:hover{
+  border: 1px solid #535bf2;
+  background-color: #191919;
+  border-radius: 1rem 1rem 1rem 1rem;
+  filter: drop-shadow(0 0 0.5rem #535bf2aa);
+  will-change: filter, border-radius;
+  transition: border-radius 0.5s, filter 0.8s;
+}
+
+.drive:active{
+  background-color: #212121;
+  filter: drop-shadow(0 0 1.2rem #535bf2aa);
+  will-change: filter, border-radius;
+  transition: border-radius 0.5s, filter 0.8s;
+}
+
+.pc{
+  margin-left: 0.1rem;
+  width: calc(100%-0.1rem);
+  margin-bottom: 1rem;
+  border: 1px solid #646cff;
+  border-radius: 0rem 0rem 1rem 1rem;
+  background-color: #191919;
+  align-content: center;
+  align-items: center;
+  font: 18px hack;
+  font-style: italic;
+  padding: 1rem;
+  text-overflow: ellipsis;
+  color: #646cff;
+  text-align: center;
+}
+
+.disk{
+  margin-top: 2rem;
+  margin-left: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.disk:hover{
+  filter: drop-shadow(0 0 0.8rem #535bf2aa);
+  will-change: filter, border-radius;
+  transition: border-radius 0.5s, filter 0.8s;
+}
+
+.filenameLabel{
+  margin-left: 1rem;
+  background-color: #191919;
+  font: 14px hack;
+  color: #646cff;
+}
+
+.submit{
+  margin-left: 1rem;
+  height: 3rem;
+  border: 1px solid #646cff;
+  border-radius: 2rem;
+  background-color: #191919;
+  align-content: center;
+  align-items: center;
+  font: 14px hack;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-overflow: ellipsis;
+  color: #646cff;
+  cursor: pointer;
+  /* I want the image to be fixed sized in width */ 
+  background-size: 1.5rem 1.5rem;
+  will-change: filter, border-radius;
+  transition: border-radius 0.5s, filter 0.8s;
+}
+
+
+.submit:hover{
+  border: 1px solid #535bf2;
+  background-color: #191919;
+  border-radius: 20px;
+  filter: drop-shadow(0 0 0.8rem #535bf2aa);
+  will-change: filter, border-radius;
+  transition: border-radius 0.5s, filter 0.8s;
+}
+
+.submit:focus{
+  outline: none;
+  border: 1px solid #535bf2;
+  background-color: #191919;
+}
+
+.submit:active{
+  border: 1px solid #535bf2;
+  background-color: #282828;
+}
+
+.searchText:focus{
+  outline: none;
+  border: 1px solid #7579c5;
+  background-color: #191919;
+  filter: drop-shadow(0 0 0.5rem #535bf2aa);
+  will-change: filter, border-radius;
+  transition: filter 0.8s;
+}
+
+
+.panel {
+  float: left;
+  width: 17%;
+  height: 100%;
+  background-color: #191919;
+  border-right: #2B2B2B 2px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.file{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  text-align: center;
+  align-content: center;
+  background-color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  border-radius: 5px;
+  border-width: 2px;
+  cursor: pointer;
+  will-change: filter, border-radius;
+  transition: border-radius 0.5s, filter 0.8s;
+}
+
+.file:hover{  
+  border: 1px solid #ff6464;
+  background-color: #1b1b1b;
+  border-radius: 20px;
+  border-width: 2px;
+  filter: drop-shadow(0 0 0.8rem #ba4141aa);
+  will-change: filter, border-radius;
+  transition: border-radius 0.5s, filter 0.8s;
+}
+
+/* Focus should be different than hover */
+.file:active{
+  border: 2px solid #b35e5e;
+  background-color: #341414;
+}
+
+.fileName{
+  text-align: bottom;
+  color: #ff6464;
+  margin: 1rem;
+  font: 14px hack;
+  width: 6rem;
+  align-items: center;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fileImg{
+  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  text-align: center;
+  color: #ff6464;
+  width: 6rem;
+}
+.fileIcon{
+  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  text-align: center;
+  color: #ff6464;
+  width: 3rem;
+}
+
+.folder{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  text-align: center;
+  align-content: center;
+  background-color: #151515;
+  border: 2px solid #1a1a1a;
+  border-radius: 5px;
+  border-width: 2px;
+  cursor: pointer;
+  will-change: filter, border-radius;
+  transition: border-radius 0.5s, filter 0.8s;
+}
+
+.folder:hover{  
+  border: 1px solid #646cff;
+  background-color: #1b1b1b;
+  border-radius: 20px;
+  border-width: 2px;
+  filter: drop-shadow(0 0 0.8rem #4147baaa);
+  will-change: filter, border-radius;
+  transition: border-radius 0.5s, filter 0.8s;
+}
+
+/* Focus should be different than hover */
+.folder:active{
+  border: 1px solid #5e8db3;
+  background-color: #141934;
+}
+
+.folderName{
+  text-align: bottom;
+  color: #646cff;
+  margin: 1rem;
+  font: 14px hack;
+  display: block;
+  width: 6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.folderImg{
+  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  text-align: center;
+  color: #646cff;
+  width: 3rem;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+#context_menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1a1a1a;
+  border: 1px solid #252525;
+  padding-right: 1rem;
+  border-radius: 15px;
+  border-width: 2px;
+  will-change: filter, border-radius;
+  transition: border-radius 0.5s, filter 0.8s;
+}
+
+
+.option{  
+  width: 100%;
+  background-color: #1a1a1a;
+  margin: 0.5rem;
+  border-radius: 5px;
+  padding: 0.1rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.option:hover{  
+  background-color: #ba4141aa;
+  filter: drop-shadow(0 0 0.8rem #ba4141aa);
+  will-change: filter;
+  transition: filter 0.2s, background-color 0.2s;
+}
+
+.option:active{
+  background-color: #b35e5e;
+  filter: drop-shadow(0 0 0.8rem #b35e5e);
+  will-change: filter;
+  transition: filter 0.2s, background-color 0.2s;
+}
+
+.path{
+  width: 100%;
+}
+
+.addressbar{  
+  width: 100%;
+  height: 1.5rem;
+  display: flex;
+  background-color: #1a1a1a;
+  border: 2px solid #252525;
+  padding-right: 1rem;
+  border-width: 2px;
+  font: 14px hack;
+  color: #ff6464;
+  will-change: filter, border-radius;
+  transition: border-radius 0.5s, filter 0.8s;
+}
+
+.addressbar:hover{  
+  border: 2px solid #646cff;
+  background-color: #1b1b1b;
+  border-width: 2px;
+  filter: drop-shadow(0 0 0.8rem #4147baaa);
+  will-change: filter;
+  transition: filter 0.8s;
+}
+
+.recursive{
+  margin-left: 1rem;
+  display: flex;
+  background-color: #1a1a1a;
+  border: 2px solid #252525;
+  padding-right: 1rem;
+  border-width: 2px;
+  font: 14px hack;
+  color: #ff6464;
+  will-change: filter, border-radius;
+  transition: border-radius 0.5s, filter 0.8s;
+}
+
+.recursiveLabel{
+  margin-left: 0.2rem;
+  color: #ff6464;
+  cursor: pointer;
+}
+
+/* the image should be small sized, and placed at the most right part */
+.loading{
+  width: 10rem;
+  height: 10rem;
+  margin-left: auto;
+}

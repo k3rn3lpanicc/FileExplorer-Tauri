@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="panel" id="myDiv">
+      <label class="pc">This PC</label>
+      <div><img src="disk.png" class="disk"><label class="drive">Local Disk (C:)</label></div>
+      <div><img src="disk.png" class="disk"><label class="drive">Local Disk (D:)</label></div>
+      <div><img src="disk.png" class="disk"><label class="drive">Local Disk (E:)</label></div>
+    </div>
+    <div class="rightbar">
+      <div class="searchbar">
+        <label class="filenameLabel">File/Folder</label>
+        <input type="text" placeholder="Search" class="searchText" id="searchText">
+        <img class="submit" src="search.png" id="search"></img>
+        <input type="checkbox" id="recursive" name="recursive" value="recursive" class="recursive">
+        <label for="recursive" class="recursiveLabel">Recursive</label>
+        <!-- I want something to indicate the loading process -->
+        <img src="waiting.gif" class="loading" id="loading"></img>
+      </div>
+      <div class="path">
+        <input value="C:\" class="addressbar" id="filenameText"></input>
+      </div>
+      <div id="app" class="app">
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
