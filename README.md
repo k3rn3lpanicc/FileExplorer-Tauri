@@ -2,6 +2,10 @@
 A small FileExplorer project for windows because I got bored :)
 
 ## About The Project
+![image](https://github.com/k3rn3lpanicc/FileExplorer-Tauri/assets/20683538/a0ffb8b6-add8-4ca6-bcce-55dd4247bee2)
+![image](https://github.com/k3rn3lpanicc/FileExplorer-Tauri/assets/20683538/2371360d-dbf2-4d26-baf1-1294c95a2d00)
+![image](https://github.com/k3rn3lpanicc/FileExplorer-Tauri/assets/20683538/a135233b-c387-4078-ae36-90f77ea9fa09)
+
 ![image](https://dl.dropboxusercontent.com/scl/fi/dodwilga6wdvwhtvxjy5v/1.gif)
 
 
