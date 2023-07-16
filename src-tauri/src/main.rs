@@ -7,13 +7,15 @@ use std::fs;
 use tauri::Manager;
 use tauri::PhysicalSize;
 use std::process::Command;
-
 mod drives;
 
+/*
+    * Get a list of logical drives
+    * @return: A vector of drive letters
+*/
 #[tauri::command]
 fn get_drives() -> Vec<String> {
-    let drives = get_logical_drives();
-    drives
+    get_logical_drives()
 }
 
 #[tauri::command]
@@ -21,7 +23,6 @@ fn get_files(input: &str) -> Vec<String> {
   let mut result = Vec::new();
   let paths = fs::read_dir(input).unwrap();
   for path in paths {
-    // check if the path is a directory
     if path.as_ref().unwrap().path().is_file() {
       let path = path.unwrap().path();
       let path = path.to_str().unwrap();
@@ -34,6 +35,7 @@ fn get_files(input: &str) -> Vec<String> {
   }
   result
 }
+
 #[tauri::command]
 fn get_folders(input: &str) -> Result<Vec<String>, String>{
     let mut result = Vec::new();
@@ -43,7 +45,6 @@ fn get_folders(input: &str) -> Result<Vec<String>, String>{
     }
     let paths = paths.unwrap();
     for path in paths {
-      // check if the path is a directory
       if path.as_ref().unwrap().path().is_dir() {
         let path = path.unwrap().path();
         let path = path.to_str().unwrap();

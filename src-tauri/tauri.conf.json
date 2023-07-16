@@ -78,7 +78,7 @@
         "fullscreen": false,
         "height": 1400,
         "resizable": true,
-        "title": "FileExplorer",
+        "title": "main",
         "width": 850
       }
     ]
