@@ -2,7 +2,7 @@
 A small FileExplorer project for windows because I got bored :)
 
 ## About The Project
-![image](https://dl.dropboxusercontent.com/scl/fi/dodwilga6wdvwhtvxjy5v/1.gif?rlkey=atftvlq9ttcrcjoffl55q5mox&dl=0)
+![image](https://dl.dropboxusercontent.com/scl/fi/dodwilga6wdvwhtvxjy5v/1.gif)
 
 
 This is a small project I made to learn more about the [Tauri](https://tauri.studio/en/) framework. It's a simple FileExplorer for windows. It's not perfect but it works. I will probably add more features in the future.
